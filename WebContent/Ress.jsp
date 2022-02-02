@@ -14,14 +14,7 @@
 	</section>
 	<section>
 		<h2>返信</h2>
-		<form action="" method="post">
 
-			<div id="new-reply-73564" class="bbp-reply-form">
-
-				<form id="new-post" name="new-post" method="post">
-
-
-					<fieldset class="bbp-form">
 						<legend>返信先: </legend>
 
 
@@ -29,7 +22,6 @@
 
 
 
-						<div>
 
 
 
