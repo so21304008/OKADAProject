@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>/スレッド</title>
 </head>
 <body>
-
+<p>/タイトル挿入</p>
+//スレッド新規から1コメ
+//レスが入力されたら
+//ホーム等リンク
 </body>
 </html>
