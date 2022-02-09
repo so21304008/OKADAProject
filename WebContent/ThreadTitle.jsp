@@ -18,12 +18,7 @@
 		rel="noopener">
 			<div>
 				<h2>1:バレンタインにチョコ買い占めてリア充泣かそうぜw</h2>
-			</div>
-	</a></li>
-	<li><a
-		href="https://medaka.5ch.net/test/read.cgi/be/1631418287/l50"
-		target="_blank" rel="noopener">
-			<div>
+				<tr><td>${thread.threadNumber}</td><td>${thread.threadName}</td></tr>
 				<h2>2:うちのおかんの飯が生物兵器だった件</h2>
 			</div>
 	</a></li>

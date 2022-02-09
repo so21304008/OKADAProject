@@ -19,5 +19,15 @@
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
 
+ <servlet>
+  	<servlet-name>addthread</servlet-name>
+  	<servlet-class>add.AddThreadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addthread</servlet-name>
+  	<url-pattern>/addthread</url-pattern>
+  </servlet-mapping>
+
+
 
 </web-app>
