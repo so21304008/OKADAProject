@@ -22,16 +22,7 @@ public class NewThreadServlet {
 
 			//SQL文を変数に格納する
 			String sql = "INSERT INTO board_Thread (th_id, th_title, th_category, th_date, th_detalis) VALUES (1234568, 'こんにちは', 'ニュース', '20220128', '挨拶は大切だよねｰ')";
-			
 
-
-
-
-
-
-
-
-;
 
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
