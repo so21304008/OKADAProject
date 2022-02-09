@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<h1>スレッドタイトル一覧</h1>
 	<!-- 検索フォーム -->
 	<form action="user_list.php" method="post">
