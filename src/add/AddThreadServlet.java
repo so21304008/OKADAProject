@@ -28,8 +28,11 @@ public class AddThreadServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		//POST要求によって送信されたパラメータを取得する
-		String _id = req.getParameter("th_id");
-		String name = req.getParameter("th_name");
+		//String _id =req.getParameter("th_id");
+		String _id = "123";
+
+		//String name = req.getParameter("th_name");
+		String name = "456";
 
 		//UserBeanをインスタンス化し、データをセットする
 		ThreadBean thread = new ThreadBean();
@@ -47,6 +50,6 @@ public class AddThreadServlet extends HttpServlet {
 		//RequestDispatcherインターフェイスを実装するクラスの
 		//インスタンスを取得する
 		//引数は転送先のURL
-		res.sendRedirect("ThreadTitle.jsp");
+		res.sendRedirect("jsp/ThreadTitle.jsp");
 	}
 }
