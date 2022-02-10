@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+<<<<<<< HEAD:WebContent/jsp/ThreadTitle.jsp
     pageEncoding="UTF-8"%>
+=======
+	pageEncoding="UTF-8"%>
+
+>>>>>>> aaa:WebContent/ThreadTitle.jsp
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>タイトル一覧</title>
 </head>
 <body>
 	<h1>スレッドタイトル一覧</h1>
@@ -17,12 +22,7 @@
 		rel="noopener">
 			<div>
 				<h2>1:バレンタインにチョコ買い占めてリア充泣かそうぜw</h2>
-			</div>
-	</a></li>
-	<li><a
-		href="https://medaka.5ch.net/test/read.cgi/be/1631418287/l50"
-		target="_blank" rel="noopener">
-			<div>
+				<tr><td>${thread.threadNumber}</td><td>${thread.threadName}</td></tr>
 				<h2>2:うちのおかんの飯が生物兵器だった件</h2>
 			</div>
 	</a></li>
