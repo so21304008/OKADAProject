@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
   <servlet>
   	<servlet-name>hello</servlet-name>
   	<servlet-class>HelloServlet</servlet-class>
@@ -18,7 +17,10 @@
   	<servlet-name>hello</servlet-name>
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fbd96bef1cb2cd2e8a3fb88449090fc5b2121f81
  <servlet>
   	<servlet-name>addthread</servlet-name>
   	<servlet-class>add.AddThreadServlet</servlet-class>
@@ -27,7 +29,18 @@
   	<servlet-name>addthread</servlet-name>
   	<url-pattern>/addthread</url-pattern>
   </servlet-mapping>
+<<<<<<< HEAD
 
 
 
+=======
+  <servlet>
+  	<servlet-name>threadtitle</servlet-name>
+  	<jsp-file>/threadtitle.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>threadtitle</servlet-name>
+  	<url-pattern>/threadtitle</url-pattern>
+  </servlet-mapping>
+>>>>>>> fbd96bef1cb2cd2e8a3fb88449090fc5b2121f81
 </web-app>
