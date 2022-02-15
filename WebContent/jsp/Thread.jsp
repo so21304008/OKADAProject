@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>/スレッド</title>
+<title>スレッド</title>
 </head>
 <body>
-<p>/タイトル挿入</p>
-//スレッド新規から1コメ
-//レスが入力されたら
-//ホーム等リンク
+<h1>タイトル挿入</h1>
+<p>おとんの痔が切れた</p>
+<h2>返信</h2>
+<form action="">
+草
+</form>
+
 </body>
 </html>
