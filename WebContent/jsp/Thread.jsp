@@ -10,9 +10,7 @@
 <h1>タイトル挿入</h1>
 <p>おとんの痔が切れた</p>
 <h2>返信</h2>
-<form action="">
-草
-</form>
-
+<h2>${bbp_anonymous_name}</h2>
+<h2>${bbp_reply_content}</h2>
 </body>
 </html>

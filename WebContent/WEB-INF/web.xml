@@ -6,14 +6,6 @@
 	<display-name>OKADAProject</display-name>
 
   	<servlet>
-		<servlet-name>addthread</servlet-name>
-		<servlet-class>add.AddThreadServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>addthread</servlet-name>
-		<url-pattern>/addthread</url-pattern>
-	</servlet-mapping>
-  	<servlet>
 		<servlet-name>ThreadTitle</servlet-name>
 		<servlet-class>Thread.ThreadTitleServlet</servlet-class>
 	</servlet>
@@ -21,7 +13,15 @@
 		<servlet-name>ThreadTitle</servlet-name>
 		<url-pattern>/ThreadTitle</url-pattern>
 	</servlet-mapping>
-	
-	
+
+	<servlet>
+		<servlet-name>Ress</servlet-name>
+		<servlet-class>ress.RessServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ress</servlet-name>
+		<url-pattern>/ress</url-pattern>
+	</servlet-mapping>
+
 
 </web-app>
