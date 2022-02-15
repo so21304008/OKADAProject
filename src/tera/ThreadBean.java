@@ -8,10 +8,10 @@ public class ThreadBean implements Serializable {
 
 	public ThreadBean(){}
 
-	public int getNumber() {
+	public int getId() {
 		return th_id;
 	}
-	public void setNumber(int th_id) {
+	public void setId(int th_id) {
 		this.th_id = th_id;
 	}
 	public String getName() {

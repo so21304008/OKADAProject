@@ -1,13 +1,30 @@
 package Thread;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-class ThreadTitleServlet {
-	public static void main(String[] args) {
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import tera.ThreadBean;
+
+public class ThreadTitleServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		this.doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException {
+		ArrayList<ThreadBean> threads = new ArrayList<ThreadBean>();
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -26,12 +43,18 @@ class ThreadTitleServlet {
 			ResultSet rs = st.executeQuery(sql);
 
 			//カーソルを一行だけスクロールし、データをフェッチする
+			//あとでループに変更while文
 			rs.next();
-			String id = rs.getString(1); //1列目のデータを取得
+			int id = rs.getInt(1);//1列目のデータを取得
 			String title = rs.getString(2); //2列目のデータを取得
 			System.out.println("th_id" + "\t" + "th_title");
 			System.out.println(id + "\t" + title);
+			ThreadBean board_Thread = new ThreadBean();
 
+			board_Thread.setId(id);
+			board_Thread.setName(title);
+
+			threads.add(board_Thread);
 			//Oracleから切断する
 			cn.close();
 			System.out.println("切断完了");
@@ -42,5 +65,13 @@ class ThreadTitleServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		req.setAttribute("threads", threads);
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/ThreadTitle.jsp");
+
+		//転送先に要求を転送する
+		dispatcher.forward(req, res);
 	}
+
 }
