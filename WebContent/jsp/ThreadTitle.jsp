@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
-    pageEncoding="UTF-8"%>
-=======
 	pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
->>>>>>> ooo
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +13,8 @@
 <body>
 	<h1>スレッドタイトル一覧</h1>
 	<!-- 検索フォーム -->
-	<form action="user_list.php" method="post">
-		検索<input type="text" name="id"> <input type="submit">
+	<form action="SearchThread" method="POST">
+		<input type="text" name=“textbox”> <input type="submit">
 	</form>
 	<!-- スレッド一覧 -->
 	<div>
