@@ -13,10 +13,6 @@
 		<servlet-name>addthread</servlet-name>
 		<url-pattern>/addthread</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-
-
-=======
   	<servlet>
 		<servlet-name>ThreadTitle</servlet-name>
 		<servlet-class>Thread.ThreadTitleServlet</servlet-class>
@@ -27,5 +23,5 @@
 	</servlet-mapping>
 	
 	
->>>>>>> ooo
+
 </web-app>
