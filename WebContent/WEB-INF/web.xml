@@ -34,7 +34,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>Ress</servlet-name>
-		<servlet-class>ress.Ress</servlet-class>
+		<servlet-class>ress.RessServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Ress</servlet-name>
