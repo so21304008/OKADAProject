@@ -6,7 +6,6 @@
 	<display-name>OKADAProject</display-name>
 
   	<servlet>
-<<<<<<< HEAD
 		<servlet-name>addthread</servlet-name>
 		<servlet-class>add.AddThreadServlet</servlet-class>
 	</servlet>
@@ -17,8 +16,6 @@
 
 
   	<servlet>
-=======
->>>>>>> c6b0d7bb52055a70ee76c0b8c43da2c03ee0f6e1
 		<servlet-name>ThreadTitle</servlet-name>
 		<servlet-class>Thread.ThreadTitleServlet</servlet-class>
 	</servlet>
@@ -28,21 +25,20 @@
 	</servlet-mapping>
 
 	<servlet>
-<<<<<<< HEAD
 		<servlet-name>SearchThread</servlet-name>
 		<servlet-class>Thread.SearchThreadServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SearchThread</servlet-name>
 		<url-pattern>/SearchThread</url-pattern>
-=======
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>Ress</servlet-name>
-		<servlet-class>ress.RessServlet</servlet-class>
+		<servlet-class>ress.Ress</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Ress</servlet-name>
 		<url-pattern>/ress</url-pattern>
->>>>>>> c6b0d7bb52055a70ee76c0b8c43da2c03ee0f6e1
 	</servlet-mapping>
 
 
