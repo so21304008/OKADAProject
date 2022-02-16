@@ -32,10 +32,9 @@
 		<servlet-name>SearchThread</servlet-name>
 		<url-pattern>/SearchThread</url-pattern>
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>Ress</servlet-name>
-		<servlet-class>ress.RessServlet</servlet-class>
+		<servlet-class>ress.Ress</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Ress</servlet-name>
