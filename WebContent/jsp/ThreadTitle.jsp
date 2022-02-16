@@ -13,7 +13,7 @@
 <body>
 	<h1>スレッドタイトル一覧</h1>
 	<!-- 検索フォーム -->
-	<form action="SearchThread" method="POST">
+	<form action="../SearchThread" method="POST">
 		<input type="text" name=“textbox”> <input type="submit">
 	</form>
 	<!-- スレッド一覧 -->
