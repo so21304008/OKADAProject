@@ -45,21 +45,17 @@ public class SearchThreadServlet extends HttpServlet {
 
 			//カーソルを一行だけスクロールし、データをフェッチする
 			//あとでループに変更while文
-			while(true){
-			rs.next();
-			int id = rs.getInt(1);//1列目のデータを取得
-			String title = rs.getString(2); //2列目のデータを取得
-			System.out.println("th_id" + "\t" + "th_title");
-			System.out.println(id + "\t" + title);
-			ThreadBean board_Thread = new ThreadBean();
+			while (rs.next()) {
+				int id = rs.getInt(1);//1列目のデータを取得
+				String title = rs.getString(2); //2列目のデータを取得
+				System.out.println("th_id" + "\t" + "th_title");
+				System.out.println(id + "\t" + title);
+				ThreadBean board_Thread = new ThreadBean();
 
-			board_Thread.setId(id);
-			board_Thread.setName(title);
+				board_Thread.setId(id);
+				board_Thread.setName(title);
 
-			threads.add(board_Thread);
-			if(id == 2) {
-				break;
-			}
+				threads.add(board_Thread);
 			}
 			//Oracleから切断する
 			cn.close();
