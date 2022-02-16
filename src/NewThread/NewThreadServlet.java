@@ -1,10 +1,23 @@
+package NewThread;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-public class NewThreadServlet {
-	public static void main(String[] args) {
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import tera.NewThreadBean;
+
+public class NewThreadServlet extends HttpServlet {
+	public ArrayList<NewThreadBean> users = new ArrayList<NewThreadBean>();
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException {
 		try {
 			//Driverインターフェイスを実装するクラスをロードする
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -21,8 +34,7 @@ public class NewThreadServlet {
 			System.out.println("接続完了");
 
 			//SQL文を変数に格納する
-			String sql = "INSERT INTO board_Thread (th_id, th_title, th_category, th_date, th_detalis) VALUES (1234568, 'こんにちは', 'ニュース', '20220128', '挨拶は大切だよねｰ')";
-
+			String sql = "INSERT INTO board_Thread (th_id, th_title, th_category, th_date, th_detalis) VALUES (nameとか)";
 
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
