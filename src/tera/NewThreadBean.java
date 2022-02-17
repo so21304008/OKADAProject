@@ -32,7 +32,7 @@ public class NewThreadBean implements Serializable {
 	}
 
 	public void setCategory(String th_category) {
-		this.th_category = th_category;s
+		this.th_category = th_category;
 	}
 
 	public String getMaintext() {

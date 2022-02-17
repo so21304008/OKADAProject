@@ -38,7 +38,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Ress</servlet-name>
-		<url-pattern>/ress</url-pattern>
+		<url-pattern>/Ress</url-pattern>
 	</servlet-mapping>
 
 
