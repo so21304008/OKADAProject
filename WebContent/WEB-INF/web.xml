@@ -41,13 +41,5 @@
 		<url-pattern>/ress</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>NewThread</servlet-name>
-		<servlet-class>NewThread.NewThreadServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>NewThread</servlet-name>
-		<url-pattern>/NewThread</url-pattern>
-	</servlet-mapping>
 
 </web-app>
