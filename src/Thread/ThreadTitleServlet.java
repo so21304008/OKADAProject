@@ -70,7 +70,7 @@ public class ThreadTitleServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/ThreadTitle.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadTitle.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);

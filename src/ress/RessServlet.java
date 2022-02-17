@@ -32,7 +32,7 @@ public class RessServlet extends HttpServlet {
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
 
-			String sql = " INSERT INTO board_res(th_id,res_id,res_date,res_text,user_name)VALUES('1111111','1111111',sysdate,'"+res_text+"','"+user_name+"')";
+			String sql = " INSERT INTO board_res(th_id,res_id,res_date,res_text,user_name)VALUES('4444434','1111111',sysdate,'"+res_text+"','"+user_name+"')";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
@@ -52,7 +52,7 @@ public class RessServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/Ress.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("Ress.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);

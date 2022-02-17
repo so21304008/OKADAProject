@@ -33,7 +33,7 @@ public class SearchThreadServlet extends HttpServlet {
 			//Oracleに接続する
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
-			
+
 			String sql = "select * from board_thread where th_title like'%" + text + "%'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
@@ -71,7 +71,7 @@ public class SearchThreadServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/ThreadTitle.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadTitle.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);

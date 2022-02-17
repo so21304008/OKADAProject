@@ -24,7 +24,7 @@
 </section>
 <section>
 <h2>返信</h2>
-<form method="get" action="../Ress">
+<form method="get" action="Ress">
 			ユーザー名 :<input type="text" name="user_name" value=""><br>
 			 スレッド本文<br>
 			<textarea name="res_text" cols="30" rows="3" maxlength="80"
