@@ -11,7 +11,7 @@
 	<h1>掲示板</h1>
 	<section>
 		<h2>新規投稿</h2>
-		<form method="get" action="../NewThread">
+		<form method="get" action="NewThread">
 			スレッドタイトル :<input type="text" name="th_title" value=""><br>
 			スレッドカテゴリー : <input type="text" name="th_category" value=""><br>
 			 スレッド本文<br>
