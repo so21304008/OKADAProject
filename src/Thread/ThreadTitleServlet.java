@@ -21,7 +21,6 @@ public class ThreadTitleServlet extends HttpServlet {
 			throws IOException, ServletException {
 		this.doPost(request, response);
 	}
-
 	protected void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 		ArrayList<ThreadBean> threads = new ArrayList<ThreadBean>();

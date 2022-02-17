@@ -14,7 +14,7 @@
 	<h1>スレッドタイトル一覧</h1>
 	<!-- 検索フォーム -->
 	<p>スレッド検索</p>
-	<form action="SearchThread" method="get">
+	<form action="../SearchThread" method="get">
 		<input type="text" name="textbox"> <input type="submit" value="検索">
 	</form>
 	<!-- スレッド一覧 -->
