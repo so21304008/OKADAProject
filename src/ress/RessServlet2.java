@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class RessServlet extends HttpServlet {
+public class RessServlet2 extends HttpServlet {
 	@Override
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -47,6 +47,15 @@ public class RessServlet extends HttpServlet {
 				threads.add(board_res);
 
 			}
+			String bbp_anonymous_name = req.getParameter("bbp_anonymous_name");
+			String bbp_reply_content = req.getParameter("bbp_reply_content");
+
+			req.setAttribute("bbp_anonymous_name", bbp_anonymous_name);
+			req.setAttribute("bbp_reply_content", bbp_reply_content);
+
+			RequestDispatcher rd = req.getRequestDispatcher("jsp/Thread.jsp");
+			rd.forward(req, resp);
+
 
 			cn.close();
 			System.out.println("切断完了");
@@ -57,10 +66,7 @@ public class RessServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		req.setAttribute("threads", threads);
-
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/ThreadTitle.jsp");
-		dispatcher.forward(req, resp);
 	}
 
 }
+

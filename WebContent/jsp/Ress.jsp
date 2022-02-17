@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,7 +17,16 @@
 <h1>掲示板</h1>
 <section>
 <h2>投稿一覧</h2>
+			<c:forEach var="thread" items="${threads}">
+				<tr>
+					<td>${thread.text}</td>
+					<td>${thread.user_name}</td>
+				</tr>
+			</c:forEach>
+
 <p>投稿はまだありません</p>
+<<<<<<< HEAD
+=======
 </section>
 <section>
 <h2>返信</h2>
@@ -67,6 +81,7 @@ name="bbp_reply_content" cols="60" rows="12"></textarea>
 </div>
 </form>
 </section>
+>>>>>>> 041cdbce74e87994f5bf2624876b1ecced9fc69e
 
 </body>
 </html>

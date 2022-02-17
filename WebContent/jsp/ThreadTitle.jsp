@@ -16,7 +16,6 @@
 	<p>スレッド検索</p>
 	<form action="SearchThread" method="get">
 		<input type="text" name="textbox"> <input type="submit" value="検索">
-	</form>
 	<!-- スレッド一覧 -->
 	<div>
 		<table>
@@ -33,5 +32,6 @@
 			</c:forEach>
 		</table>
 	</div>
+	</form>
 </body>
 </html>
