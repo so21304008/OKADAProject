@@ -35,7 +35,7 @@ public class NewThreadServlet extends HttpServlet {
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
 
-			String sql = " INSERT INTO board_thread(th_id, th_title,th_category,th_date,th_detalis)VALUES('1111111','"+th_title+"','"+th_category+"',sysdate,'"+th_maintext+"')";
+			String sql = " INSERT INTO board_thread(th_id, th_title,th_category,th_date,th_detalis)VALUES('2222222','"+th_title+"','"+th_category+"',sysdate,'"+th_maintext+"')";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
