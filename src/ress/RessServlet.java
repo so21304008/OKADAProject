@@ -15,39 +15,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class RessServlet extends HttpServlet {
-	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		this.doPost(request, response);
+	}
 
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+	protected void doPost(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException {
+		String res_text = req.getParameter("res_text");
+		String user_name = req.getParameter("user_name");
 		ArrayList<RessBean> threads = new ArrayList<RessBean>();
-
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			//Oracleに接続する
-			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl", "info", "pro");
+			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
 
-			req.setCharacterEncoding("UTF-8");
+			String sql = " INSERT INTO board_res(th_id,res_id,res_date,res_text,user_name)VALUES('1111111','1111111',sysdate,'"+res_text+"','"+user_name+"')";
 
-			String sql = " SELECT res_text, user_name FROM board_res";
+			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
+
 			ResultSet rs = st.executeQuery(sql);
-			while (rs.next()) {
 
-				String text = rs.getString(1);//1列目のデータを取得
-				String user_name = rs.getString(2); //2列目のデータを取得
-				System.out.println("res_text" + "\t" + "user_name");
-				System.out.println(text + "\t" + user_name);
-				RessBean board_res = new RessBean();
-
-				board_res.setText(text);
-				board_res.setUser_name(user_name);
-
-				threads.add(board_res);
-
-			}
-
+			//Oracleから切断する
 			cn.close();
 			System.out.println("切断完了");
 		} catch (ClassNotFoundException e) {
@@ -57,10 +49,13 @@ public class RessServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/ThreadTitle.jsp");
-		dispatcher.forward(req, resp);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/Ress.jsp");
+
+		//転送先に要求を転送する
+		dispatcher.forward(req, res);
 	}
 
 }
