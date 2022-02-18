@@ -1,18 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+	pageEncoding="UTF-8"%>
 <%@include file="common/header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>スレッド</title>
+<title>返信</title>
+<title>掲示板</title>
 </head>
-
 <body>
-<form action="ress" method="get">
-<h1>タイトル挿入</h1>
-<p>おとんの痔が切れた</p>
+<h1>掲示板</h1>
+<section>
+<h2>投稿一覧</h2>
+			<c:forEach var="thread" items="${threads}">
+				<tr>
+					<td>${thread.id}</td>
+					<td>${thread.name}</td>
+				</tr>
+			</c:forEach>
 
+<p></p>
+</section>
 <section>
 <h2>返信</h2>
 <form method="get" action="Ress">
@@ -21,11 +30,12 @@
 			<textarea name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。"></textarea>
 			<input type="submit" value="投稿">
-</div>
-</div>
+
 </form>
 </section>
 
-</form>
 </body>
 </html>
+
+
+

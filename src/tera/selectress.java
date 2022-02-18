@@ -1,8 +1,9 @@
-package NewThread;
+package tera;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -13,33 +14,44 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import tera.NewThreadBean;
-
-public class NewThreadServlet extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+public class selectress extends HttpServlet {
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		this.doPost(request, response);
+		this.doGet(request, response);
 	}
 
-	protected void doPost(HttpServletRequest req, HttpServletResponse res)
+	protected void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 		String th_title = req.getParameter("th_title");
-		String th_category = req.getParameter("th_category");
-		String th_maintext = req.getParameter("maintext");
-		ArrayList<NewThreadBean> threads = new ArrayList<NewThreadBean>();
+		ArrayList<ThreadBean> threads = new ArrayList<ThreadBean>();
 		try {
+
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			//Oracleに接続する
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
 
-			String sql = " INSERT INTO board_thread(th_title,th_category,th_detalis)VALUES('"+th_title+"','"+th_category+"','"+th_maintext+"')";
+			String sql = " SELECT th_title, th_detalis FROM board_Thread WHERE th_title=''" +th_title+ "'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
 
-			st.executeQuery(sql);
+			//select文を実行し
+			//ResultSetインターフェイスを実装したクラスの
+			//インスタンスが返る
+			ResultSet rs = st.executeQuery(sql);
+
+			//カーソルを一行だけスクロールし、データをフェッチする
+			rs.next();
+			int id = rs.getInt(1);//1列目のデータを取得
+			String title = rs.getString(2); //2列目のデータを取得
+			System.out.println("th_id" + "\t" + "th_title");
+			System.out.println(id + "\t" + title);
+			ThreadBean board_Thread = new ThreadBean();
+
+			board_Thread.setId(id);
+			board_Thread.setName(title);
 
 			//Oracleから切断する
 			cn.close();
@@ -54,7 +66,7 @@ public class NewThreadServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("NewThread.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("Ress1.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);
