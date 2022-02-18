@@ -10,10 +10,20 @@
 <form action="ress" method="get">
 <h1>タイトル挿入</h1>
 <p>おとんの痔が切れた</p>
-<h2>返信</h2>
 
-<h2>${bbp_anonymous_name}</h2>
-<h2>${bbp_reply_content}</h2>
+<section>
+<h2>返信</h2>
+<form method="get" action="Ress">
+			ユーザー名 :<input type="text" name="user_name" value=""><br>
+			 スレッド本文<br>
+			<textarea name="res_text" cols="30" rows="3" maxlength="80"
+				wrap="hard" placeholder="80字以内で入力してください。"></textarea>
+			<input type="submit" value="投稿">
+</div>
+</div>
+</form>
+</section>
+
 </form>
 </body>
 </html>

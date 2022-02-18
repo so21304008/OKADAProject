@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -15,23 +16,30 @@
 	<!-- 検索フォーム -->
 	<p>スレッド検索</p>
 	<form action="SearchThread" method="get">
-		<input type="text" name="textbox"> <input type="submit" value="検索">
-	<!-- スレッド一覧 -->
-	<div>
-		<table>
-			<tr>
-				<th>スレッド番号</th>
-				<th>スレッド名</th>
-			</tr>
-
-			<c:forEach var="thread" items="${threads}">
+		<input type="text" name="textbox"> <input type="submit"
+			value="検索">
+		<!-- スレッド一覧 -->
+		<div>
+			<table>
 				<tr>
-					<td>${thread.id}</td>
-					<td>${thread.name}</td>
+					<th>スレッド番号</th>
+					<th>スレッド名</th>
 				</tr>
-			</c:forEach>
-		</table>
-	</div>
+
+				<c:forEach var="thread" items="${threads}">
+					<tr>
+
+
+						<td>${thread.id}</td>
+						<td><a href="Ress?e=${thread.id}">${thread.name}</a></td>
+
+
+					</tr>
+				</c:forEach>
+
+			</table>
+
+		</div>
 	</form>
 </body>
 </html>
