@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 				Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 				System.out.println("接続完了");
 
-				String sql = " SELECT th_id, th_title FROM board_Thread";
+				String sql = " SELECT user_name,res_text FROM board_res ORDER BY th_id ASC";
 
 				//Statementインターフェイスを実装するクラスをインスタンス化する
 				Statement st = cn.createStatement();
@@ -45,14 +45,14 @@ import javax.servlet.http.HttpServletResponse;
 				//あとでループに変更while文
 				while (rs.next()) {
 
-					int id = rs.getInt(1);//1列目のデータを取得
-					String title = rs.getString(2); //2列目のデータを取得
-					System.out.println("th_id" + "\t" + "th_title");
-					System.out.println(id + "\t" + title);
+					String user_name = rs.getString(1);//1列目のデータを取得
+					String res_text = rs.getString(2); //2列目のデータを取得
+					System.out.println("user_name" + "\t" + "res_text");
+					System.out.println(user_name + "\t" + res_text);
 					ThreadBean board_Thread = new ThreadBean();
 
-					board_Thread.setId(id);
-					board_Thread.setName(title);
+					board_Thread.setUser_name(user_name);
+					board_Thread.setRes_text(res_text);
 
 					threads.add(board_Thread);
 
