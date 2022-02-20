@@ -45,7 +45,7 @@ body {
 	display: inline-block;
 	width: 80px;
 	height: 150px;
-	background: url(static/img/5.png) no-repeat;
+	background: url(static/img/30.png) no-repeat;
 	position: absolute;
 	left: -16px;
 	top: 90px;
@@ -114,7 +114,7 @@ padding:10px;
 						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/8.png " />
+						src="static/img/29.png " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
 						src="static/img/11.png " />
@@ -126,7 +126,7 @@ padding:10px;
 						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/8.png " />
+						src="static/img/29.png " />
 				</a></li>
 			</ul>
 			<i class='btn_left'></i> <i class='btn_right'></i>
