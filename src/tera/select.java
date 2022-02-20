@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import tera.ThreadBean;
-
 	public class select extends HttpServlet {
 		public void doGet(HttpServletRequest request, HttpServletResponse response)
 				throws IOException, ServletException {
@@ -33,7 +31,7 @@ import tera.ThreadBean;
 				Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 				System.out.println("接続完了");
 
-				String sql = " SELECT th_id, th_title FROM board_Thread";
+				String sql = " SELECT th_id, th_title,th_detalis FROM board_Thread";
 
 				//Statementインターフェイスを実装するクラスをインスタンス化する
 				Statement st = cn.createStatement();
@@ -49,12 +47,14 @@ import tera.ThreadBean;
 
 					int id = rs.getInt(1);//1列目のデータを取得
 					String title = rs.getString(2); //2列目のデータを取得
-					System.out.println("th_id" + "\t" + "th_title");
-					System.out.println(id + "\t" + title);
+					String detalis=rs.getString(3);
+					System.out.println("th_id" + "\t" + "th_title"+ "\t" + "th_detalis");
+					System.out.println(id + "\t" + title+ "\t" + detalis);
 					ThreadBean board_Thread = new ThreadBean();
 
 					board_Thread.setId(id);
 					board_Thread.setName(title);
+					board_Thread.setDetalis(detalis);
 
 					threads.add(board_Thread);
 

@@ -95,6 +95,12 @@ body {
 }
 .table2{
 color:#333;}
+.th{
+margin-left:400px;
+}
+.tb3{
+padding:10px;
+}
 </style>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </head>
@@ -105,22 +111,22 @@ color:#333;}
 		<div class='content'>
 			<ul>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/4.png " />
+						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/1.png " />
+						src="static/img/8.png " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/22.jpg " />
+						src="static/img/11.png " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/3.png " />
+						src="static/img/19.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/4.png " />
+						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/1.png " />
+						src="static/img/8.png " />
 				</a></li>
 			</ul>
 			<i class='btn_left'></i> <i class='btn_right'></i>
@@ -177,16 +183,18 @@ color:#333;}
 	</div>
 		<!--表示-->
 			<div>
-				<table>
+				<table class="th">
 					<tr>
-						<th>スレッド番号</th>
-						<th>スレッド名</th>
+						<th>スレッド番号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+						<th>スレッド名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+						<th>内容</th>
 					</tr>
 
 				<c:forEach var="thread" items="${threads}">
 					<tr>
 						<td class="table1">${thread.id}</td>
 						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
+						<td class="tb3">${thread.detalis}</td>
 					</tr>
 				</c:forEach>
 				</table>

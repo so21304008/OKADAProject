@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ThreadBean implements Serializable {
 	private int th_id;
 	private String th_name;
-	private String th_title;
+	private String th_detalis;
 
 	public ThreadBean(){}
 
@@ -22,11 +22,11 @@ public class ThreadBean implements Serializable {
 		this.th_name = th_name;
 	}
 
-	public String getTh_title() {
-		return th_title;
+	public String getDetalis() {
+		return th_detalis;
 	}
 
-	public void setTh_title(String th_title) {
-		this.th_title = th_title;
+	public void setDetalis(String th_detalis) {
+		this.th_detalis = th_detalis;
 	}
 }

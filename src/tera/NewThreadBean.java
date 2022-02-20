@@ -7,6 +7,7 @@ public class NewThreadBean implements Serializable {
 	private String th_title;
 	private String th_category;
 	private String th_maintext;
+	private String th_detalis;
 
 	public NewThreadBean() {
 	}
@@ -41,5 +42,13 @@ public class NewThreadBean implements Serializable {
 
 	public void setMaintext(String th_maintext) {
 		this.th_maintext = th_maintext;
+	}
+
+	public String getTh_detalis() {
+		return th_detalis;
+	}
+
+	public void setTh_detalis(String th_detalis) {
+		this.th_detalis = th_detalis;
 	}
 }
