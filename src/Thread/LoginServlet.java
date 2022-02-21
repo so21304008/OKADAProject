@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 			ps.setString(2, pwd);
 			rs = ps.executeQuery();
 			if (rs.next()){
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("index");
 				System.out.println("login ok!!");
 				PrintWriter out = response.getWriter();
 				out.flush();

@@ -91,8 +91,4 @@ ul li {
 		<li><a href="ThreadTitle.jsp">検索</a></li>
 		<li><a href="NewThread.jsp">書き込み</li>
 	</ul>
-	<div class='login'>
-		<span><a href="login.jsp" class="login1">login</a></span> <span>|</span> <span><a
-			href="registered.jsp" class=registered>registered</a></span>
-	</div>
 </div>

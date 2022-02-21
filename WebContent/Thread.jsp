@@ -21,8 +21,6 @@
 			<textarea name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。"></textarea>
 			<input type="submit" value="投稿">
-</div>
-</div>
 </form>
 </section>
 
