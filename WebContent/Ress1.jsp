@@ -13,14 +13,17 @@
 .hennji {
 	margin-top: 50px;
 	margin-left: 350px;
+	color: #333;
 }
 
 .usern {
+	color: #333;
 	margin-left: 350px;
 	margin-top: 5px:
 }
 
 .threadt {
+	color: #333;
 	margin-left: 350px;
 	margin-top: 30px:
 }
@@ -64,24 +67,24 @@
 					value="">
 			</p>
 			<p class="threadt">スレッド本文 :</p>
-			<textarea name="res_text" cols="30" rows="3" maxlength="80" wrap="hard"
-				placeholder="80字以内で入力してください。" class="tt"></textarea>
+			<textarea name="res_text" cols="30" rows="3" maxlength="80"
+				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 			<input type="submit" value="投      稿" class="enniu3">
 
 		</form>
 	</section>
-		<table class="thd">
-				<h2 align="center">コメント</h2>
-				<tr>
-					<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-					<th>コメント</th>
-				</tr>
-				<c:forEach var="thread" items="${threads}">
-					<tr>
-						<td class="table1">${thread.user_name}</td>
-						<td>${thread.res_text}</td>
-					</tr>
-				</c:forEach>
-			</table>
+	<table class="thd">
+		<h2 align="center">コメント</h2>
+		<tr>
+			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+			<th>コメント</th>
+		</tr>
+		<c:forEach var="thread" items="${threads}">
+			<tr>
+				<td class="table1">${thread.user_name}</td>
+				<td>${thread.res_text}</td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>

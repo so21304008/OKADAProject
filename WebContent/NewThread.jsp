@@ -13,8 +13,9 @@
 	margin-top:50px;
 	margin-left:445px;
 	font-weight: bold;
+	color: #333;
 }
-.category{margin-top:20px;margin-left:445px;font-weight: bold;}
+.category{margin-top:20px;margin-left:445px;font-weight: bold;color: #333;}
 .date{margin-top:20px;margin-left:445px;font-weight: bold;}
 .text{margin-top:20px;
     width: 407px;
@@ -23,6 +24,7 @@
 .nai{
 font-weight: bold;
 margin-left:50px;
+color: #333;
 }
 .newth{
 margin-top:50px;}
