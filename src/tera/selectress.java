@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 
 		protected void doPost(HttpServletRequest req, HttpServletResponse res)
 				throws ServletException, IOException {
+			String id = req.getParameter("e");
 			ArrayList<ThreadBean> threads = new ArrayList<ThreadBean>();
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -32,7 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 				System.out.println("接続完了");
 
 				String sql = " SELECT user_name,res_text FROM board_res ORDER BY res_id DESC";
-
+				System.out.println("SELECT th_text FROM board_thread WHERE th_id = '" + id + "'");
 				//Statementインターフェイスを実装するクラスをインスタンス化する
 				Statement st = cn.createStatement();
 
