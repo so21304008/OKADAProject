@@ -58,7 +58,6 @@
 }
 </style>
 <body>
-	</section>
 	<section>
 		<h2 class="hennji">返信</h2>
 		<form method="get" action="Ress">

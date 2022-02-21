@@ -89,6 +89,6 @@ ul li {
 	<ul>
 		<li class='first'><a href="index">ホーム</a></li>
 		<li><a href="ThreadTitle.jsp">検索</a></li>
-		<li><a href="NewThread.jsp">書き込み</li>
+		<li><a href="NewThread.jsp">書き込み</a></li>
 	</ul>
 </div>

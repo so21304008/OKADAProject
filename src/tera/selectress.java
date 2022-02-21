@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 				Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 				System.out.println("接続完了");
 
-				String sql = " SELECT user_name,res_text FROM board_res ORDER BY res_id ASC";
+				String sql = " SELECT user_name,res_text FROM board_res ORDER BY res_date ASC";
 
 				//Statementインターフェイスを実装するクラスをインスタンス化する
 				Statement st = cn.createStatement();
