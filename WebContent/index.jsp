@@ -114,10 +114,10 @@ padding:10px;
 						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/29.png " />
+						src="static/img/11.png " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/11.png " />
+						src="static/img/29.png " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
 						src="static/img/19.jpg " />
@@ -126,7 +126,7 @@ padding:10px;
 						src="static/img/14.jpg " />
 				</a></li>
 				<li class='fl'><a href="javascript:void(0)"> <img
-						src="static/img/29.png " />
+						src="static/img/11.png " />
 				</a></li>
 			</ul>
 			<i class='btn_left'></i> <i class='btn_right'></i>
