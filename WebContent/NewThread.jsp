@@ -81,7 +81,7 @@ background-image: linear-gradient(to bottom, white, white);
 			</p>
 			<p align="center" class="nai">
 				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：
-				<textarea id="textarea" cols="77" rows="10" maxlength="1500"
+				<textarea id="textarea" name="maintext" cols="77" rows="10" maxlength="1500"
 					placeholder="1500文字以内でお願いします。"></textarea>
 			<p align="center">
 				<input type="submit" id="btn" disabled="disabled" value="投      稿" class="enniu2">

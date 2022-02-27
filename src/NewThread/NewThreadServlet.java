@@ -26,6 +26,9 @@ public class NewThreadServlet extends HttpServlet {
 		String th_title = req.getParameter("th_title");
 		String th_category = req.getParameter("th_category");
 		String th_maintext = req.getParameter("maintext");
+		if(th_maintext == null) {
+			th_maintext = "";
+		}
 		ArrayList<NewThreadBean> threads = new ArrayList<NewThreadBean>();
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

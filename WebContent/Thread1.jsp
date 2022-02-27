@@ -56,7 +56,7 @@ padding:10px;
 					<tr>
 						<td class="table1">${thread.id}</td>
 						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
-						<td class="tb3">${thread.detalis}</td>
+						<td class="tb3"><c:out value="${thread.detalis}"/></td>
 					</tr>
 				</c:forEach>
 				</table>
