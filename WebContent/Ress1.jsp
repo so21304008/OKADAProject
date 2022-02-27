@@ -31,7 +31,7 @@
 .tt {
 	width: 400px;
 	height: 100px;
-	margin-left: 460px;
+	margin-top: 10px;
 }
 
 .thd {
@@ -64,11 +64,10 @@
 			<p class="usern">
 				ユ&nbspー&nbspザ&nbspー&nbsp名:<input type="text" name="user_name"
 					value="">
-			</p>
-			<p class="threadt">スレッド本文 :</p>
+			<p class="threadt">スレッド本文 :
 			<textarea name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
-			<input type="submit" value="投      稿" class="enniu3">
+			<input type="submit" value="投      稿" class="enniu3"></p>
 
 		</form>
 	</section>
