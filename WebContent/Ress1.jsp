@@ -70,8 +70,8 @@
 			<textarea name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 			<input type="submit" value="投      稿" class="enniu3"></p>
-
 		</form>
+
 	</section>
 	<table class="thd">
 		<h2 align="center">コメント</h2>
