@@ -103,13 +103,14 @@ color:#333;}
 		<h1 align="center" class="sure">スレッドタイトル一覧</h1>
 	<div>
 		<table class="as">
+
 			<tr>
 				<th class="table1">スレッド番号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
 				<th>スレッド名</th>
 			</tr>
-			<c:forEach var="thread" items="${threads}">
+					<c:forEach var="thread" items="${threads}">
 					<tr>
-						<td class="table1">${thread.id}</td>
+						<td class="table1"><a href="selectress?e=${thread.id}" class="table2">${thread.id}</a></td>
 						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
 					</tr>
 				</c:forEach>

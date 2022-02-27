@@ -54,11 +54,12 @@ padding:10px;
 
 				<c:forEach var="thread" items="${threads}">
 					<tr>
-						<td class="table1">${thread.id}</td>
+						<td class="table1"><a href="selectress?e=${thread.id}" class="table2">${thread.id}</a></td>
 						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
-						<td class="tb3">${thread.detalis}</td>
+						<td class="tb3"><a href="selectress?e=${thread.id}" class="table2">${thread.detalis}</a></td>
 					</tr>
 				</c:forEach>
+			
 				</table>
 			</div>
 </body>
