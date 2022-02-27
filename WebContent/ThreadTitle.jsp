@@ -4,6 +4,20 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript">
+if($('.Textarea').val().length == 0){
+	  $('.Btn').prop('disabled', true);
+	}
+	$('.Textarea').on('keydown keyup keypress change', function(){
+	  if($(this).val().length == 0){
+	    $('.Btn').prop('disabled', true);
+	  } else if($(this).val().length > 30) {
+	    $('.Btn').prop('disabled', true);
+	  } else {
+	    $('.Btn').prop('disabled', false);
+	  }
+	});
+</script>
 <title>タイトル一覧</title>
 </head>
 <style>

@@ -27,7 +27,7 @@ margin-top:50px;}
 	<%@include file="common/header.jsp"%>
 <h1 align="center" class="newth">投稿完了！</h1>
 <p align="center">
-<button type=“button” onclick="location.href='index'" class="button">スレッドタイトルへ</button>
+<button type=“button” onclick="location.href='selectress'" class="button">スレッドタイトルへ</button>
 </p>
 
 <%@include file="common/footer.jsp"%>

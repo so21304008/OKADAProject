@@ -54,7 +54,7 @@ public class NewThreadServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("NewThread.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("NewThreadResult.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);
