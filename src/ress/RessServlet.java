@@ -51,7 +51,7 @@ public class RessServlet extends HttpServlet {
 
 		req.setAttribute("threads", threads);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("selectress");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("ressresult.jsp");
 
 		//転送先に要求を転送する
 		dispatcher.forward(req, res);
