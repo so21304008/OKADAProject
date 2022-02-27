@@ -61,6 +61,8 @@
 	<section>
 		<h2 class="hennji">返信</h2>
 		<form method="get" action="Ress">
+		<input type="hidden" value="${id}" name="id">
+
 			<p class="usern">
 				ユ&nbspー&nbspザ&nbspー&nbsp名:<input type="text" name="user_name"
 					value="">
