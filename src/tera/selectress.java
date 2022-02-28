@@ -33,17 +33,12 @@ public class selectress extends HttpServlet {
 			String sql = " SELECT user_name,res_text FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id DESC";
 			String sql2 = "SELECT th_detalis FROM board_thread WHERE th_id = '" + id + "'";
 
-<<<<<<< HEAD
+
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
 			Statement st2 = cn.createStatement();
-=======
-				String sql = " SELECT user_name,res_text FROM board_res "
-						+ "where th_id = "+ id +" ORDER BY res_id DESC";
-				System.out.println("SELECT th_text FROM board_thread WHERE th_id = '" + id + "'");
+
 				//Statementインターフェイスを実装するクラスをインスタンス化する
-				Statement st = cn.createStatement();
->>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 
 			//select文を実行し
 			//ResultSetインターフェイスを実装したクラスの
@@ -73,8 +68,6 @@ public class selectress extends HttpServlet {
 				board_Thread.setRes_text(res_text);
 				threads.add(board_Thread);
 			}
-
-<<<<<<< HEAD
 			//Oracleから切断する
 			cn.close();
 			System.out.println("切断完了");
@@ -84,15 +77,6 @@ public class selectress extends HttpServlet {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
-=======
-			req.setAttribute("threads", threads);
-			req.setAttribute("id",id);
-
-			RequestDispatcher dispatcher = req.getRequestDispatcher("Ress1.jsp");
-
-			//転送先に要求を転送する
-			dispatcher.forward(req, res);
->>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 		}
 
 		req.setAttribute("threads", threads);

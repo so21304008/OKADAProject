@@ -54,9 +54,9 @@ padding:10px;
 
 				<c:forEach var="thread" items="${threads}">
 					<tr>
-						<td class="table1"><a href="selectress?e=${thread.id}" class="table2">${thread.id}</a></td>
-						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
-						<td class="tb3"><a href="selectress?e=${thread.id}" class="table2"><c:out value="${thread.detalis}"/></a></td>
+						<td class="table1"><a href="selectress?e=${thread.th_id}" class="table2">${thread.th_id}</a></td>
+						<td><a href="selectress?e=${thread.th_id}" class="table2">${thread.name}</a></td>
+						<td class="tb3"><a href="selectress?e=${thread.th_id}" class="table2"><c:out value="${thread.th_detalis}"/></a></td>
 					</tr>
 				</c:forEach>
 

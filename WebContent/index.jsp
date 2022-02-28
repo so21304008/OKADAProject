@@ -145,30 +145,8 @@ body {
 			});
 		}
 	</script>
-<<<<<<< HEAD
-	<div class="itirann">
-		<div class='logo-2'>――― タイトル一覧 ―――</div>
-	</div>
-		<!--表示-->
-			<div>
-				<table class="th">
-					<tr>
-						<th>スレッド番号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-						<th>スレッド名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-						<th>内容</th>
-					</tr>
 
-				<c:forEach var="thread" items="${threads}">
-					<tr>
-						<td class="table1">${thread.th_id}</td>
-						<td><a href="selectress?e=${thread.th_id}" class="table2">${thread.name}</a></td>
-						<td class="tb3">${thread.th_detalis}</td>
-					</tr>
-				</c:forEach>
-				</table>
-			</div>
-=======
->>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
+
 	<%@include file="common/footer.jsp"%>
 </body>
 </html>

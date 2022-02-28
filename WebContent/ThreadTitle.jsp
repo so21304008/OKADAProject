@@ -124,13 +124,11 @@ color:#333;}
 			</tr>
 					<c:forEach var="thread" items="${threads}">
 					<tr>
-<<<<<<< HEAD
+
 						<td class="table1">${thread.th_id}</td>
 						<td><a href="selectress?e=${thread.th_id}" class="table2">${thread.name}</a></td>
-=======
-						<td class="table1"><a href="selectress?e=${thread.id}" class="table2">${thread.id}</a></td>
-						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
->>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
+
+
 					</tr>
 				</c:forEach>
 		</table>
