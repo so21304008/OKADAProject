@@ -19,7 +19,7 @@
 }
 
 .category {
-	margin-top: 4px;
+	margin-top: 20px;
 	margin-left: 445px;
 	font-weight: bold;
 	color: #333;
@@ -38,15 +38,9 @@
 }
 
 .nai {
-	vertical-align:top;
 	font-weight: bold;
-	margin-left: 446px;
-	margin-top:4px;
+	margin-left: 50px;
 	color: #333;
-}
-#textarea{
-margin-left:561px;
-margin-top:-21px;
 }
 
 .newth {
@@ -68,9 +62,8 @@ margin-top:-21px;
 }
 
 .enniu2:disabled {
-background-image: linear-gradient(to bottom, white, white);
+	background-image: linear-gradient(to bottom, white, white);
 }
-
 </style>
 <body>
 	<section>
@@ -85,12 +78,13 @@ background-image: linear-gradient(to bottom, white, white);
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
 					name="th_category" value="">
 			</p>
-			<div class="nai">
-				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：</div>
-				<textarea id="textarea" name="maintext" cols="77" rows="10" maxlength="1500"
-					placeholder="1500文字以内でお願いします。"></textarea>
+			<p align="center" class="nai">
+				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：
+				<textarea id="textarea" name="maintext" cols="77" rows="10"
+					maxlength="1500" placeholder="1500文字以内でお願いします。"></textarea>
 			<p align="center">
-				<input type="submit" id="btn" disabled="disabled" value="投      稿" class="enniu2">
+				<input type="submit" id="btn" disabled="disabled" value="投      稿"
+					class="enniu2">
 			</p>
 		</form>
 	</section>
@@ -99,10 +93,21 @@ background-image: linear-gradient(to bottom, white, white);
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 const title = document.getElementById('title');
+const textarea = document.getElementById('textarea');
 const btn = document.getElementById('btn');
 
 title.addEventListener('keyup', (e) => {
-  if (title.value.length > 0) {
+	console.log(title.value.length, textarea.value.length);
+  if (title.value.length > 0 && textarea.value.length > 0 ) {
+    btn.disabled = false;
+  }else{
+    btn.disabled = true;
+  }
+});
+
+textarea.addEventListener('keyup', (e) => {
+	console.log(title.value.length, textarea.value.length);
+  if (title.value.length > 0 && textarea.value.length > 0 ) {
     btn.disabled = false;
   }else{
     btn.disabled = true;
