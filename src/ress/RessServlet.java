@@ -22,7 +22,12 @@ public class RessServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String res_text = req.getParameter("res_text");
 		String user_name = req.getParameter("user_name");
+<<<<<<< HEAD
 		String id = req.getParameter("th_id");
+=======
+		String id = req.getParameter("id");
+		ArrayList<RessBean> threads = new ArrayList<RessBean>();
+>>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -30,9 +35,14 @@ public class RessServlet extends HttpServlet {
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
 
+<<<<<<< HEAD
 			String sql = " INSERT INTO board_res(th_id,res_date,res_text,user_name)VALUES('" + id + "',sysdate,'"
 					+ res_text
 					+ "','" + user_name + "')";
+=======
+			String sql = " INSERT INTO board_res(th_id,res_date,res_text,user_name)VALUES("+id+", sysdate,'"+res_text+"','"+user_name+"')";
+
+>>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
 
@@ -51,8 +61,12 @@ public class RessServlet extends HttpServlet {
 
 		req.setAttribute("id", id);
 
+<<<<<<< HEAD
 		String disp = "selectress2";
 		RequestDispatcher dispatch = req.getRequestDispatcher(disp);
+=======
+		RequestDispatcher dispatcher = req.getRequestDispatcher("ressresult.jsp");
+>>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 
 		dispatch.forward(req, res);
 	}

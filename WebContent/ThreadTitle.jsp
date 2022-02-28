@@ -4,6 +4,20 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript">
+if($('.Textarea').val().length == 0){
+	  $('.Btn').prop('disabled', true);
+	}
+	$('.Textarea').on('keydown keyup keypress change', function(){
+	  if($(this).val().length == 0){
+	    $('.Btn').prop('disabled', true);
+	  } else if($(this).val().length > 30) {
+	    $('.Btn').prop('disabled', true);
+	  } else {
+	    $('.Btn').prop('disabled', false);
+	  }
+	});
+</script>
 <title>タイトル一覧</title>
 </head>
 <style>
@@ -103,14 +117,20 @@ color:#333;}
 		<h1 align="center" class="sure">スレッドタイトル一覧</h1>
 	<div>
 		<table class="as">
+
 			<tr>
 				<th class="table1">スレッド番号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
 				<th>スレッド名</th>
 			</tr>
-			<c:forEach var="thread" items="${threads}">
+					<c:forEach var="thread" items="${threads}">
 					<tr>
+<<<<<<< HEAD
 						<td class="table1">${thread.th_id}</td>
 						<td><a href="selectress?e=${thread.th_id}" class="table2">${thread.name}</a></td>
+=======
+						<td class="table1"><a href="selectress?e=${thread.id}" class="table2">${thread.id}</a></td>
+						<td><a href="selectress?e=${thread.id}" class="table2">${thread.name}</a></td>
+>>>>>>> 56f5e01b6838ef09247b55265d3ec16c3be70d39
 					</tr>
 				</c:forEach>
 		</table>

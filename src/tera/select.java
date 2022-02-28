@@ -72,7 +72,7 @@ import javax.servlet.http.HttpServletResponse;
 
 			req.setAttribute("threads", threads);
 
-			RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("Thread1.jsp");
 
 			//転送先に要求を転送する
 			dispatcher.forward(req, res);
