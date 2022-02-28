@@ -18,20 +18,22 @@
 
 .usern {
 	color: #333;
-	margin-left: 350px;
-	margin-top: 5px:
+	margin-left: 368px;
+	margin-top: 0px:
+	margin-
 }
 
 .threadt {
 	color: #333;
-	margin-left: 350px;
-	margin-top: 30px:
+	margin-left: 352px;
+	margin-top:5px;
 }
 
 .tt {
 	width: 400px;
 	height: 100px;
-	margin-top: 10px;
+	margin-left:455px;
+	margin-top:-21px;
 }
 
 .thd {
@@ -55,7 +57,8 @@
 	text-shadow: 0 1px 2px rgb(0 0 0/ 30%);
 	padding: 6px;
 	margin-bottom: 20px;
-	margin-left: 6px;
+	margin-top:18px;
+	margin-left: 642px;
 	border-radius: 5px;
 }
 
@@ -85,14 +88,21 @@
 
 
 			<p class="usern">
-				ユ&nbspー&nbspザ&nbspー&nbsp名:<input type="text" name="user_name"
+				ユーザー名:<input type="text" name="user_name"
 					value="">
+<<<<<<< HEAD
 			<p class="threadt">
 				レス本文 :
 				<textarea name="res_text" cols="30" rows="3" maxlength="80"
 					wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 				<input type="submit" value="投      稿" class="enniu3">
 			</p>
+=======
+			<div class="threadt">スレッド本文:</div>
+			<textarea name="res_text" cols="30" rows="3" maxlength="80"
+				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
+			<div><input type="submit" value="投      稿" class="enniu3"></div>
+>>>>>>> 73b759756d1e3e6ced6761700cc8576d4690b3d7
 		</form>
 
 	</section>
