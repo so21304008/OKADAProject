@@ -62,6 +62,10 @@
 	border-radius: 5px;
 }
 
+.enniu3:disabled{
+	background-image: linear-gradient(to bottom, white, white);
+}
+
 .table1 {
 	vertical-align: top;
 	padding: 20px;
@@ -81,7 +85,7 @@
 		<form method="get" action="Ress">
 
 			<c:forEach var="thread" items="${threads}">
-				<input id="" name="th_id" type="hidden" value="${thread.th_id}">
+				<input id="id" name="th_id" type="hidden" value="${thread.th_id}">
 			</c:forEach>
 
 			<input type="hidden" value="${id}" name="id">
@@ -90,10 +94,10 @@
 			<p class="usern">
 				ユーザー名:<input type="text" name="user_name" value="">
 			<div class="threadt">レス本文:</div>
-			<textarea name="res_text" cols="30" rows="3" maxlength="80"
+			<textarea id = "res_text" name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 			<div>
-				<input type="submit" value="投      稿" class="enniu3">
+				<input type="submit" id = "btn" disabled="disabled" value="投      稿" class="enniu3">
 			</div>
 
 		</form>
@@ -113,4 +117,29 @@
 		</c:forEach>
 	</table>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+const id = document.getElementById('id');
+const res_text = document.getElementById('res_text');
+const btn = document.getElementById('btn');
+
+id.addEventListener('keyup', (e) => {
+	console.log(id.value.length, res_text.value.length);
+  if (id.value.length > 0 && res_text.value.length > 0 ) {
+    btn.disabled = false;
+  }else{
+    btn.disabled = true;
+  }
+});
+
+res_text.addEventListener('keyup', (e) => {
+	console.log(id.value.length, res_text.value.length);
+  if (id.value.length > 0 && res_text.value.length > 0 ) {
+    btn.disabled = false;
+  }else{
+    btn.disabled = true;
+  }
+});
+</script>
+
 </html>
