@@ -56,6 +56,7 @@ body {
 a {
 	color: #fff;
 	text-decoration: none;
+	display: block;
 }
 
 .header ul li:hover {

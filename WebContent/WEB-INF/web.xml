@@ -4,6 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>OKADAProject</display-name>
+
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>Thread.LoginServlet</servlet-class>
@@ -12,6 +13,7 @@
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>addthread</servlet-name>
 		<servlet-class>add.AddThreadServlet</servlet-class>
@@ -20,7 +22,6 @@
 		<servlet-name>addthread</servlet-name>
 		<url-pattern>/addthread</url-pattern>
 	</servlet-mapping>
-
 
 	<servlet>
 		<servlet-name>ThreadTitle</servlet-name>
@@ -57,6 +58,7 @@
 		<servlet-name>NewThread</servlet-name>
 		<url-pattern>/NewThread</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>select</servlet-name>
 		<servlet-class>tera.select</servlet-class>
@@ -65,6 +67,7 @@
 		<servlet-name>select</servlet-name>
 		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>selectress</servlet-name>
 		<servlet-class>tera.selectress</servlet-class>
@@ -72,5 +75,14 @@
 	<servlet-mapping>
 		<servlet-name>selectress</servlet-name>
 		<url-pattern>/selectress</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>selectress2</servlet-name>
+		<servlet-class>tera.Selectress2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectress2</servlet-name>
+		<url-pattern>/selectress2</url-pattern>
 	</servlet-mapping>
 </web-app>
