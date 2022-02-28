@@ -33,12 +33,11 @@ public class selectress extends HttpServlet {
 			String sql = " SELECT user_name,res_text FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id DESC";
 			String sql2 = "SELECT th_detalis FROM board_thread WHERE th_id = '" + id + "'";
 
-
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st = cn.createStatement();
 			Statement st2 = cn.createStatement();
 
-				//Statementインターフェイスを実装するクラスをインスタンス化する
+			//Statementインターフェイスを実装するクラスをインスタンス化する
 
 			//select文を実行し
 			//ResultSetインターフェイスを実装したクラスの
@@ -46,19 +45,21 @@ public class selectress extends HttpServlet {
 			ResultSet rs = st.executeQuery(sql);
 			ResultSet rs2 = st2.executeQuery(sql2);
 
-			ThreadBean board_Thread = new ThreadBean();
+			ThreadBean board_ThreadTitle = new ThreadBean();
 
 			//スレッド本文の処理
 			rs2.next();
 			String th_detalis = rs2.getString(1);//1列目のデータを取得
 			System.out.println("th_detalis");
 			System.out.println(th_detalis);
-			board_Thread.setTh_detalis(th_detalis);
-			board_Thread.setTh_id(id);
-			threads.add(board_Thread);
+			board_ThreadTitle.setTh_detalis(th_detalis);
+			board_ThreadTitle.setTh_id(id);
+			threads.add(board_ThreadTitle);
+
 			//カーソルを一行だけスクロールし、データをフェッチする
 			//あとでループに変更while文
 			while (rs.next()) {
+				ThreadBean board_Thread = new ThreadBean();
 				String user_name = rs.getString(1);//1列目のデータを取得
 				String res_text = rs.getString(2); //2列目のデータを取得
 				System.out.println("user_name" + "\t" + "res_text");
@@ -68,10 +69,13 @@ public class selectress extends HttpServlet {
 				board_Thread.setRes_text(res_text);
 				threads.add(board_Thread);
 			}
+
 			//Oracleから切断する
 			cn.close();
 			System.out.println("切断完了");
-		} catch (ClassNotFoundException e) {
+		} catch (
+
+		ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();

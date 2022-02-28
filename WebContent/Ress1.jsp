@@ -58,15 +58,21 @@
 	margin-left: 6px;
 	border-radius: 5px;
 }
+
+.table1 {
+	vertical-align: top;
+	 padding : 20px ;
+}
 </style>
 <body>
-	<h2 align="center">本文</h2>
-	<c:forEach var="thread" items="${threads}">
-		<tr>
-			<td>${thread.th_detalis}</td>
-		</tr>
-	</c:forEach>
-
+	<table class="thd">
+		<h2 align="center">本文</h2>
+		<c:forEach var="thread" items="${threads}">
+			<tr>
+				<td>${thread.th_detalis}</td>
+			</tr>
+		</c:forEach>
+	</table>
 	<section>
 		<h2 class="hennji">返信</h2>
 		<form method="get" action="Ress">
@@ -75,16 +81,18 @@
 				<input id="" name="th_id" type="hidden" value="${thread.th_id}">
 			</c:forEach>
 
-		<input type="hidden" value="${id}" name="id">
+			<input type="hidden" value="${id}" name="id">
 
 
 			<p class="usern">
 				ユ&nbspー&nbspザ&nbspー&nbsp名:<input type="text" name="user_name"
 					value="">
-			<p class="threadt">スレッド本文 :
-			<textarea name="res_text" cols="30" rows="3" maxlength="80"
-				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
-			<input type="submit" value="投      稿" class="enniu3"></p>
+			<p class="threadt">
+				レス本文 :
+				<textarea name="res_text" cols="30" rows="3" maxlength="80"
+					wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
+				<input type="submit" value="投      稿" class="enniu3">
+			</p>
 		</form>
 
 	</section>
@@ -97,7 +105,7 @@
 		<c:forEach var="thread" items="${threads}">
 			<tr>
 				<td class="table1">${thread.user_name}</td>
-				<td>${thread.res_text}</td>
+				<td class="table1">${thread.res_text}</td>
 			</tr>
 		</c:forEach>
 	</table>
