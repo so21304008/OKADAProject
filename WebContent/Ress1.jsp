@@ -37,6 +37,8 @@
 .thd {
 	margin-top: 30px;
 	margin-left: 350px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 .table2 {
@@ -58,9 +60,19 @@
 }
 </style>
 <body>
+	<h2 align="center">本文</h2>
+	<c:forEach var="thread" items="${threads}">
+		<tr>
+			<td>${thread.th_detalis}</td>
+		</tr>
+	</c:forEach>
+
 	<section>
 		<h2 class="hennji">返信</h2>
 		<form method="get" action="Ress">
+			<c:forEach var="thread" items="${threads}">
+				<input id="" name="th_id" type="hidden" value="${thread.th_id}">
+			</c:forEach>
 			<p class="usern">
 				ユ&nbspー&nbspザ&nbspー&nbsp名:<input type="text" name="user_name"
 					value="">

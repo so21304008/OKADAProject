@@ -3,7 +3,7 @@ package tera;
 import java.io.Serializable;
 
 public class ThreadBean implements Serializable {
-	private int th_id;
+	private String th_id;
 	private String th_name;
 	private String th_detalis;
 	private	String user_name;
@@ -11,10 +11,10 @@ public class ThreadBean implements Serializable {
 
 	public ThreadBean(){}
 
-	public int getId() {
+	public String getTh_id() {
 		return th_id;
 	}
-	public void setId(int th_id) {
+	public void setTh_id(String th_id) {
 		this.th_id = th_id;
 	}
 	public String getName() {
@@ -24,14 +24,13 @@ public class ThreadBean implements Serializable {
 		this.th_name = th_name;
 	}
 
-	public String getDetalis() {
+	public String getTh_detalis() {
 		return th_detalis;
 	}
 
-	public void setDetalis(String th_detalis) {
+	public void setTh_detalis(String th_detalis) {
 		this.th_detalis = th_detalis;
 	}
-
 
 
 	public String getRes_text() {

@@ -45,16 +45,16 @@ import javax.servlet.http.HttpServletResponse;
 				//あとでループに変更while文
 				while (rs.next()) {
 
-					int id = rs.getInt(1);//1列目のデータを取得
+					String id = rs.getString(1);//1列目のデータを取得
 					String title = rs.getString(2); //2列目のデータを取得
 					String detalis=rs.getString(3);
 					System.out.println("th_id" + "\t" + "th_title"+ "\t" + "th_detalis");
 					System.out.println(id + "\t" + title+ "\t" + detalis);
 					ThreadBean board_Thread = new ThreadBean();
 
-					board_Thread.setId(id);
+					board_Thread.setTh_id(id);
 					board_Thread.setName(title);
-					board_Thread.setDetalis(detalis);
+					board_Thread.setTh_detalis(detalis);
 
 					threads.add(board_Thread);
 
