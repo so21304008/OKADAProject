@@ -8,6 +8,7 @@
 <title>スレッド一覧</title>
 </head>
 <style>
+a:hover{color:red;}
 .itirann .logo-2 {
 	color: #333;
 	font-size: 30px;

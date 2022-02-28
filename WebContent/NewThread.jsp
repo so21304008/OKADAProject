@@ -19,7 +19,7 @@
 }
 
 .category {
-	margin-top: 20px;
+	margin-top: 4px;
 	margin-left: 445px;
 	font-weight: bold;
 	color: #333;
@@ -38,9 +38,15 @@
 }
 
 .nai {
+	vertical-align:top;
 	font-weight: bold;
-	margin-left: 50px;
+	margin-left: 446px;
+	margin-top:4px;
 	color: #333;
+}
+#textarea{
+margin-left:561px;
+margin-top:-21px;
 }
 
 .newth {
@@ -79,8 +85,8 @@ background-image: linear-gradient(to bottom, white, white);
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
 					name="th_category" value="">
 			</p>
-			<p align="center" class="nai">
-				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：
+			<div class="nai">
+				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：</div>
 				<textarea id="textarea" name="maintext" cols="77" rows="10" maxlength="1500"
 					placeholder="1500文字以内でお願いします。"></textarea>
 			<p align="center">
