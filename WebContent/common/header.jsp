@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <style>
 body {
-	width: 1366px; height; auto;
+	width: 100%; height; auto;
 	overflow: script;
 	marging;
 	0
