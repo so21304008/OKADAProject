@@ -31,7 +31,7 @@ public class Selectress2 extends HttpServlet {
 			//Oracleに接続する
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
-			String sql = " SELECT user_name,res_text, res_date FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id DESC";
+			String sql = " SELECT user_name,res_text, res_date FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id ASC";
 			String sql2 = "SELECT th_detalis FROM board_thread WHERE th_id = '" + id + "'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
