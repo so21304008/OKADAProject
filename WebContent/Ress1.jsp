@@ -90,14 +90,17 @@
 		<tr>
 			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
 			<th>コメント</th>
+			<th>日付</th>
 		</tr>
 		<c:forEach var="thread" items="${threads}">
 			<tr>
 				<td class="table1">${thread.user_name}</td>
 				<td class="table1">${thread.res_text}</td>
+				<td class="table1">${thread.res_date}</td>
 			</tr>
 		</c:forEach>
 	</table>
+
 	<section>
 		<h2 class="hennji">返信</h2>
 		<form method="get" action="Ress">

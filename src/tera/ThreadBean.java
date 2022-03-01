@@ -8,6 +8,7 @@ public class ThreadBean implements Serializable {
 	private String th_detalis;
 	private	String user_name;
 	private	String res_text;
+	private	String res_date;
 
 	public ThreadBean(){}
 
@@ -47,5 +48,13 @@ public class ThreadBean implements Serializable {
 
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
+	}
+
+	public String getRes_date() {
+		return res_date;
+	}
+
+	public void setRes_date(String res_date) {
+		this.res_date = res_date;
 	}
 }

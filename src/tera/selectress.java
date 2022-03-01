@@ -30,7 +30,7 @@ public class selectress extends HttpServlet {
 			//Oracleに接続する
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
-			String sql = " SELECT user_name,res_text FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id DESC";
+			String sql = " SELECT user_name,res_text, to_char(res_date, 'yyyy/mm/dd hh24:mi') FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id DESC";
 			String sql2 = "SELECT th_detalis FROM board_thread WHERE th_id = '" + id + "'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
@@ -62,11 +62,13 @@ public class selectress extends HttpServlet {
 				ThreadBean board_Thread = new ThreadBean();
 				String user_name = rs.getString(1);//1列目のデータを取得
 				String res_text = rs.getString(2); //2列目のデータを取得
-				System.out.println("user_name" + "\t" + "res_text");
-				System.out.println(user_name + "\t" + res_text);
+				String res_date = rs.getString(3); //3列目のデータを取得
+				System.out.println("user_name" + "\t" + "res_text" + "\t" + "res_date");
+				System.out.println(user_name + "\t" + res_text + "\t" + res_date);
 
 				board_Thread.setUser_name(user_name);
 				board_Thread.setRes_text(res_text);
+				board_Thread.setRes_date(res_date);
 				threads.add(board_Thread);
 			}
 
