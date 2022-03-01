@@ -149,9 +149,9 @@
 			<table class="thd">
 				<h2 align="center">コメント</h2>
 				<tr>
-					<th>ユーザー名</th>
-					<th>コメント</th>
-					<th>日付</th>
+					<td class="table1">ユーザー名</th>
+					<td class="table1">コメント</th>
+					<td class="table1">日付</th>
 				</tr>
 				<c:forEach var="thread" items="${threads}">
 					<tr>
