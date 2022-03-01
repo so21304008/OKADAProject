@@ -77,8 +77,13 @@
 		<form method="get" action="NewThread">
 			<p class="title">
 
+<<<<<<< HEAD
 				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text"
 					maxlength="50" placeholder="50文字以内" name="th_title" value="" style="width:460px;">
+=======
+				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" size = "58" type="text"
+					maxlength="50" placeholder="50文字以内" name="th_title" value="">
+>>>>>>> 8de6098889f8429cd88a04a97c672b6aa085d896
 			</p>
 			<p class="category">
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
