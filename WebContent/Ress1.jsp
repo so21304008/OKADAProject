@@ -42,6 +42,7 @@
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
 .table2 {
 	color: #333;
 }
@@ -64,12 +65,18 @@
 .enniu3:disabled {
 	background-image: linear-gradient(to bottom, white, white);
 }
-.mian{
-margin:10px 350px;
+
+.main {
+	margin: 10px 350px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
+
 .table1 {
 	vertical-align: top;
 	padding: 5px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 </style>
 <body>
@@ -77,7 +84,7 @@ margin:10px 350px;
 		<h2 align="center">本文</h2>
 		<c:forEach var="thread" items="${threads}">
 			<tr>
-				<td><p class="mian">${thread.th_detalis}</p></td>
+				<td><p class="main">${thread.th_detalis}</p></td>
 			</tr>
 		</c:forEach>
 	</table>
