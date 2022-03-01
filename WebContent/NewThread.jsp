@@ -77,16 +77,19 @@
 		<form method="get" action="NewThread">
 			<p class="title">
 				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" size = "58" type="text"
-					maxlength="50" placeholder="50文字以内" name="th_title" value="">
+					maxlength="50" placeholder="50文字以内" name="th_title" value="" onkeyup="checkLen1(this)"
+            data-options="required:true">
 			</p>
 			<p class="category">
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
-					name="th_category" value="" style="width:270px;">
+					name="th_category" value="" style="width:270px;" onkeyup="checkLen2(this)"
+            data-options="required:true">
 			</p>
 			<div class="nai">
 				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：</div>
 				<textarea id="textarea" name="maintext" cols="60" rows="7"
-					maxlength="1500" placeholder="1500文字以内でお願いします。"></textarea>
+					maxlength="1500" placeholder="1500文字以内でお願いします。" onkeyup="checkLen3(this)"
+            data-options="required:true"></textarea>
 			<p align="center">
 				<input type="submit" id="btn" disabled="disabled" value="投      稿"
 					class="enniu2">
@@ -97,6 +100,27 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+function checkLen1(obj){
+    var maxChars = 50;
+    if (obj.value.length > maxChars){
+        alert("文字数が多い");
+        obj.value = obj.value.substring(0,maxChars);
+    }
+}
+function checkLen2(obj){
+    var maxChars = 30;
+    if (obj.value.length > maxChars){
+        alert("文字数が多い");
+        obj.value = obj.value.substring(0,maxChars);
+    }
+}
+function checkLen3(obj){
+    var maxChars = 1500;
+    if (obj.value.length > maxChars){
+        alert("文字数が多い");
+        obj.value = obj.value.substring(0,maxChars);
+    }
+}
 const title = document.getElementById('title');
 const textarea = document.getElementById('textarea');
 const btn = document.getElementById('btn');

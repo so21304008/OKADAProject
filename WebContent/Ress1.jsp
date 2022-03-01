@@ -116,10 +116,12 @@
 
 
 			<p class="usern">
-				ユーザー名:<input type="text" name="user_name" value="" maxlength="20" placeholder="20文字以内">
+				ユーザー名:<input type="text" name="user_name" value="" maxlength="20" placeholder="20文字以内"onkeyup="checkLen2(this)"
+            data-options="required:true">
 			<div class="threadt">レ ス 本 文:</div>
 			<textarea id="res_text" name="res_text" cols="30" rows="3"
-				maxlength="80" wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
+				maxlength="80" wrap="hard" placeholder="80字以内で入力してください。" class="tt" onkeyup="checkLen3(this)"
+            data-options="required:true"></textarea>
 			<div>
 				<input type="submit" id="btn" disabled="disabled" value="投      稿"
 					class="enniu3">
@@ -133,6 +135,20 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+function checkLen2(obj){
+    var maxChars = 30;
+    if (obj.value.length > maxChars){
+        alert("文字数が多い");
+        obj.value = obj.value.substring(0,maxChars);
+    }
+}
+function checkLen3(obj){
+    var maxChars = 80;
+    if (obj.value.length > maxChars){
+        alert("文字数が多い");
+        obj.value = obj.value.substring(0,maxChars);
+    }
+}
 const id = document.getElementById('id');
 const res_text = document.getElementById('res_text');
 const btn = document.getElementById('btn');
