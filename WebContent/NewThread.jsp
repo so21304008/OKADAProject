@@ -39,7 +39,7 @@
 
 .nai {
 	font-weight: bold;
-	margin-left: 50px;
+	margin-left: 327px;
 	color: #333;
 }
 
@@ -71,16 +71,16 @@
 		<form method="get" action="NewThread">
 			<p class="title">
 
-				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text"
-					maxlength="100" placeholder="100文字以内" name="th_title" value="">
+				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text" size="88"
+					maxlength="50" placeholder="50文字以内" name="th_title" value="">
 			</p>
 			<p class="category">
-				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
+				カ テ&nbspゴ リ ー：<input type="text" size="88"  maxlength="20" placeholder="20文字以内"
 					name="th_category" value="">
 			</p>
 			<p align="center" class="nai">
 				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：
-				<textarea id="textarea" name="maintext" cols="77" rows="10"
+				<textarea id="textarea" name="maintext" cols="90" rows="10"
 					maxlength="1500" placeholder="1500文字以内でお願いします。"></textarea>
 			<p align="center">
 				<input type="submit" id="btn" disabled="disabled" value="投      稿"
