@@ -72,7 +72,7 @@
 			<p class="title">
 
 				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text"
-					maxlength="100" placeholder="100文字以内" name="th_title" value="">
+					maxlength="50" placeholder="50文字以内" name="th_title" value="">
 			</p>
 			<p class="category">
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
