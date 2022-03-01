@@ -78,59 +78,92 @@
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
+#contents {
+	display: flex;
+	padding: 40px;
+	box-sizing: border-box;
+}
+
+#main {
+	box-sizing: border-box;
+	height: 2000px;
+	flex: 1;
+}
+
+#sub {
+	box-sizing: border-box;
+	width: 300px;
+	margin-right: auto;
+}
+
+#sub .box {
+	position: sticky;
+	top: 25px;
+	width: 100%;
+	height: 300px;
+}
 </style>
 <body>
-	<table>
-		<h2 align="center">本 &nbsp&nbsp&nbsp文</h2>
-		<c:forEach var="thread" items="${threads}">
-			<tr>
-				<td><p class="main">${thread.th_detalis}</p></td>
-			</tr>
-		</c:forEach>
-	</table>
-	<table class="thd">
-		<h2 align="center">コメント</h2>
-		<tr>
-			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-			<th>コメント</th>
-			<th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日付</th>
-		</tr>
-		<c:forEach var="thread" items="${threads}">
-			<tr>
-				<td class="table1">${thread.user_name}</td>
-				<td class="table1">${thread.res_text}</td>
-				<td class="table1">${thread.res_date}</td>
-			</tr>
-		</c:forEach>
-	</table>
+	<div id="contents">
+		<aside id="sub">
+			<div class="box">
+				<section>
+					<h2>返信</h2>
+					<form method="get" action="Ress">
 
-	<section>
-		<h2 class="hennji">返信</h2>
-		<form method="get" action="Ress">
+						<c:forEach var="thread" items="${threads}">
+							<input id="id" name="th_id" type="hidden" value="${thread.th_id}">
+						</c:forEach>
 
-			<c:forEach var="thread" items="${threads}">
-				<input id="id" name="th_id" type="hidden" value="${thread.th_id}">
-			</c:forEach>
-
-			<input type="hidden" value="${id}" name="id">
+						<input type="hidden" value="${id}" name="id">
 
 
-			<p class="usern">
-				ユーザー名:<input type="text" name="user_name" value="" maxlength="20" placeholder="20文字以内"onkeyup="checkLen2(this)"
-            data-options="required:true">
-			<div class="threadt">レ ス 本 文:</div>
-			<textarea id="res_text" name="res_text" cols="30" rows="3"
-				maxlength="80" wrap="hard" placeholder="80字以内で入力してください。" class="tt" onkeyup="checkLen3(this)"
-            data-options="required:true"></textarea>
-			<div>
-				<input type="submit" id="btn" disabled="disabled" value="投      稿"
-					class="enniu3">
+						<p>
+							ユーザー名:<input type="text" name="user_name" value="" maxlength="20"
+								placeholder="20文字以内" onkeyup="checkLen2(this)"
+								data-options="required:true">
+						<div>レ ス 本 文:</div>
+						<textarea id="res_text" name="res_text" cols="30" rows="3"
+							maxlength="80" wrap="hard" placeholder="80字以内で入力してください。"
+							onkeyup="checkLen3(this)" data-options="required:true"></textarea>
+						<div>
+							<input type="submit" id="btn" disabled="disabled"
+								value="投      稿">
+						</div>
+
+					</form>
+
+				</section>
 			</div>
+		</aside>
+		<main id="main">
+			<table>
+				<h2 align="center">本文</h2>
+				<c:forEach var="thread" items="${threads}">
+					<tr>
+						<td><p class="main">${thread.th_detalis}</p></td>
+					</tr>
+				</c:forEach>
+			</table>
+			<table class="thd">
+				<h2 align="center">コメント</h2>
+				<tr>
+					<th>ユーザー名</th>
+					<th>コメント</th>
+					<th>日付</th>
+				</tr>
+				<c:forEach var="thread" items="${threads}">
+					<tr>
+						<td class="table1">${thread.user_name}</td>
+						<td class="table1">${thread.res_text}</td>
+						<td class="table1">${thread.res_date}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</main>
 
-		</form>
-
-	</section>
-
+	</div>
 </body>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
