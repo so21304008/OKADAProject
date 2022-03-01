@@ -11,7 +11,7 @@
 .kuriku a:hover {
 	color: red;
 	cursor: pointer;
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 .itirann .logo-2 {
@@ -38,10 +38,15 @@
 
 .table2 {
 	color: #333;
+	undefined display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 200px;
 }
 
 .th {
-	margin-left: 400px;
+	margin-left: 300px;
 }
 
 .tb3 {

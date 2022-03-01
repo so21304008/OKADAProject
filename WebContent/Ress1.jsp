@@ -43,6 +43,11 @@
 	word-wrap: break-word;
 }
 
+.main {
+	margin-top: 30px;
+	margin-left: 350px;
+}
+
 .table2 {
 	color: #333;
 }
@@ -62,7 +67,7 @@
 	border-radius: 5px;
 }
 
-.enniu3:disabled{
+.enniu3:disabled {
 	background-image: linear-gradient(to bottom, white, white);
 }
 
@@ -72,11 +77,24 @@
 }
 </style>
 <body>
-	<table class="thd">
+	<table class="main">
 		<h2 align="center">本文</h2>
 		<c:forEach var="thread" items="${threads}">
 			<tr>
 				<td>${thread.th_detalis}</td>
+			</tr>
+		</c:forEach>
+	</table>
+	<table class="thd">
+		<h2 align="center">コメント</h2>
+		<tr>
+			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+			<th>コメント</th>
+		</tr>
+		<c:forEach var="thread" items="${threads}">
+			<tr>
+				<td class="table1">${thread.user_name}</td>
+				<td class="table1">${thread.res_text}</td>
 			</tr>
 		</c:forEach>
 	</table>
@@ -94,30 +112,20 @@
 			<p class="usern">
 				ユーザー名:<input type="text" name="user_name" value="">
 			<div class="threadt">レ ス 本 文:</div>
-			<textarea id = "res_text" name="res_text" cols="30" rows="3" maxlength="80"
-				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
+			<textarea id="res_text" name="res_text" cols="30" rows="3"
+				maxlength="80" wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 			<div>
-				<input type="submit" id = "btn" disabled="disabled" value="投      稿" class="enniu3">
+				<input type="submit" id="btn" disabled="disabled" value="投      稿"
+					class="enniu3">
 			</div>
 
 		</form>
 
 	</section>
-	<table class="thd">
-		<h2 align="center">コメント</h2>
-		<tr>
-			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-			<th>コメント</th>
-		</tr>
-		<c:forEach var="thread" items="${threads}">
-			<tr>
-				<td class="table1">${thread.user_name}</td>
-				<td class="table1">${thread.res_text}</td>
-			</tr>
-		</c:forEach>
-	</table>
+
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 const id = document.getElementById('id');
 const res_text = document.getElementById('res_text');
