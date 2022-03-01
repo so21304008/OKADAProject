@@ -25,7 +25,7 @@
 
 .threadt {
 	color: #333;
-	margin-left: 352px;
+	margin-left: 367px;
 	margin-top: 5px;
 }
 
@@ -68,7 +68,7 @@
 
 .table1 {
 	vertical-align: top;
-	padding: 20px;
+	padding: 5px;
 }
 </style>
 <body>
@@ -93,7 +93,7 @@
 
 			<p class="usern">
 				ユーザー名:<input type="text" name="user_name" value="">
-			<div class="threadt">レス本文:</div>
+			<div class="threadt">レ ス 本 文:</div>
 			<textarea id = "res_text" name="res_text" cols="30" rows="3" maxlength="80"
 				wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
 			<div>

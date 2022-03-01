@@ -72,7 +72,6 @@ a {
 
 .header ul li.first {
 	margin-left: 30px;
-	background: #74b0e2;
 }
 
 ul li {

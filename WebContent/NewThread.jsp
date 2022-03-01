@@ -39,12 +39,18 @@
 
 .nai {
 	font-weight: bold;
-	margin-left: 50px;
+	margin-left: 445px;
+	margin-top:15px;
 	color: #333;
 }
 
 .newth {
 	margin-top: 50px;
+}
+
+#textarea {
+	margin-top: -22px;
+	margin-left:563px;
 }
 
 .enniu2 {
@@ -78,9 +84,9 @@
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
 					name="th_category" value="">
 			</p>
-			<p align="center" class="nai">
-				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：
-				<textarea id="textarea" name="maintext" cols="77" rows="10"
+			<div class="nai">
+				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：</div>
+				<textarea id="textarea" name="maintext" cols="60" rows="7"
 					maxlength="1500" placeholder="1500文字以内でお願いします。"></textarea>
 			<p align="center">
 				<input type="submit" id="btn" disabled="disabled" value="投      稿"

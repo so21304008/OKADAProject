@@ -8,7 +8,7 @@
 <title>welcome</title>
 <style>
 body {
-	width: 1366px; height; auto;
+	width: 1366px; height:auto;
 	overflow: script;
 	marging;
 	0
@@ -68,6 +68,7 @@ body {
 .banner .content:hover .btn_right {
 	opacity: 1;
 }
+
 </style>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </head>
@@ -145,8 +146,6 @@ body {
 			});
 		}
 	</script>
-
-
 	<%@include file="common/footer.jsp"%>
 </body>
 </html>
