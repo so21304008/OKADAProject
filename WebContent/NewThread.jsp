@@ -77,7 +77,7 @@
 		<form method="get" action="NewThread">
 			<p class="title">
 
-				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text"
+				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" size = "58" type="text"
 					maxlength="50" placeholder="50文字以内" name="th_title" value="">
 			</p>
 			<p class="category">
