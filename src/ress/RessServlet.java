@@ -57,8 +57,6 @@ public class RessServlet extends HttpServlet {
 		String disp = "selectress2";
 		RequestDispatcher dispatch = req.getRequestDispatcher(disp);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ressresult.jsp");
-
 
 		dispatch.forward(req, res);
 	}
