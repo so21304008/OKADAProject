@@ -93,7 +93,7 @@
 
 #sub {
 	box-sizing: border-box;
-	width: 300px;
+	width: 90px;
 	margin-right: auto;
 }
 
