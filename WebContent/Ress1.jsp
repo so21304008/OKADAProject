@@ -81,7 +81,7 @@
 </style>
 <body>
 	<table>
-		<h2 align="center">本文</h2>
+		<h2 align="center">本 &nbsp&nbsp&nbsp文</h2>
 		<c:forEach var="thread" items="${threads}">
 			<tr>
 				<td><p class="main">${thread.th_detalis}</p></td>
@@ -93,7 +93,7 @@
 		<tr>
 			<th>ユーザー名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
 			<th>コメント</th>
-			<th>日付</th>
+			<th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日付</th>
 		</tr>
 		<c:forEach var="thread" items="${threads}">
 			<tr>
