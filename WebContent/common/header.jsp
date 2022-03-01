@@ -90,6 +90,6 @@ ul li {
 		<li class='first'><a href="index.jsp">ホーム</a></li>
 		<li><a href="index">スレッド一覧</a></li>
 		<li><a href="ThreadTitle.jsp">検索</a></li>
-		<li><a href="NewThread.jsp">書き込み</a></li>
+		<li><a href="NewThread.jsp">新規投稿</a></li>
 	</ul>
 </div>
