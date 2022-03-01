@@ -106,6 +106,11 @@ margin-top:150px;
 }
 .table2{
 color:#333;}
+.colorr a:hover {
+	color: red;
+	cursor: pointer;
+	text-decoration: underline;
+}}
 </style>
 <body>
 <img src="static/img/6.png "  class="img1">
@@ -115,7 +120,7 @@ color:#333;}
 		<input type="text" name="textbox" class="textt"> <input type="submit" value="検索" class="enniu1">
 	<!-- スレッド一覧 -->
 		<h1 align="center" class="sure">スレッドタイトル一覧</h1>
-	<div>
+	<div class="colorr">
 		<table class="as">
 
 			<tr>
