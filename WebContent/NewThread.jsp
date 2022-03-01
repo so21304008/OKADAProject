@@ -78,11 +78,11 @@
 			<p class="title">
 
 				タ &nbsp&nbspイ &nbspト &nbspル：<input id="title" type="text"
-					maxlength="50" placeholder="50文字以内" name="th_title" value="">
+					maxlength="50" placeholder="50文字以内" name="th_title" value="" style="width:460px;">
 			</p>
 			<p class="category">
 				カ テ&nbspゴ リ ー：<input type="text" maxlength="20" placeholder="20文字以内"
-					name="th_category" value="">
+					name="th_category" value="" style="width:270px;">
 			</p>
 			<div class="nai">
 				内 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp容：</div>
