@@ -116,7 +116,7 @@
 
 
 			<p class="usern">
-				ユーザー名:<input type="text" name="user_name" value="">
+				ユーザー名:<input type="text" name="user_name" value="" maxlength="20" placeholder="20文字以内">
 			<div class="threadt">レ ス 本 文:</div>
 			<textarea id="res_text" name="res_text" cols="30" rows="3"
 				maxlength="80" wrap="hard" placeholder="80字以内で入力してください。" class="tt"></textarea>
