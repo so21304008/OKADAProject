@@ -46,7 +46,7 @@
 }
 
 .th {
-	margin-left: 300px;
+	margin-left: 470px;
 }
 
 .tb3 {
