@@ -31,7 +31,7 @@ public class Selectress2 extends HttpServlet {
 			//Oracleに接続する
 			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "info", "pro");
 			System.out.println("接続完了");
-			String sql = " SELECT user_name,res_text, res_date FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id ASC";
+			String sql = " SELECT user_name,res_text, to_char(res_date, 'yyyy/mm/dd hh24:mi') FROM board_res WHERE th_id = '" + id + "'ORDER BY res_id ASC";
 			String sql2 = "SELECT th_detalis FROM board_thread WHERE th_id = '" + id + "'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
@@ -73,7 +73,8 @@ public class Selectress2 extends HttpServlet {
 				board_Thread.setRes_date(res_date);
 
 				threads.add(board_Thread);
-			}
+				System.out.println(res_date);
+				}
 
 			//Oracleから切断する
 			cn.close();
