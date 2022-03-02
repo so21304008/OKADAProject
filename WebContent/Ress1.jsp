@@ -139,6 +139,14 @@
 		</aside>
 		<main id="main">
 			<table>
+				<h2 align="center">タイトル</h2>
+				<c:forEach var="thread" items="${threads}">
+					<tr>
+						<td><p class="main">${thread.name}</p></td>
+					</tr>
+				</c:forEach>
+			</table>
+			<table>
 				<h2 align="center">本文</h2>
 				<c:forEach var="thread" items="${threads}">
 					<tr>
